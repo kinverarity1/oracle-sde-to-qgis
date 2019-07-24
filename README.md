@@ -98,3 +98,4 @@ WHERE  sde.St_contains (sde.St_polygon (
 , 3107), shape) = 1  
 ```
 
+![](spatial-query-woop-woop.png)
