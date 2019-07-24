@@ -86,3 +86,15 @@ QgsProject.instance().addMapLayer(layer)
 Note the SQL function ``sde.st_astext(shape)`` which converts the ST_GEOMETRY object in the `shape` column to a Well-Known Text (WKT) format. Maybe see [here](http://desktop.arcgis.com/en/arcmap/10.3/manage-data/using-sql-with-gdbs/st-astext.htm)?
 
 I haven't pulled any attributes, just focusing on the geometry here. You need to know the CRS yourself - I figured out manually that the database in question is using EPSG 3107.
+
+## Spatial queries woop woop
+
+```sql
+SELECT dhno, 
+       sde.St_astext(shape) 
+FROM   water.drillholes 
+WHERE  sde.St_contains (sde.St_polygon ( 
+'polygon ((1252701 1897185, 1364200 1897185, 1364200 1977889, 1252701 1977889, 1252701 1897185))' 
+, 3107), shape) = 1  
+```
+
