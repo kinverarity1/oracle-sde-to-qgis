@@ -2,7 +2,7 @@
 
 Messy notes for getting data from Oracle with SDE geometries into QGIS (on Windows).
 
-You have an Oracle database. It stories geometries in ArcSDE format. You want to read the tables in QGIS. You may or may not be running Windows. These notes may be helpful to you.
+You have an Oracle database. It stores geometries in ArcSDE format. You want to read the tables in QGIS. You may or may not be running Windows. These notes may be helpful to you.
 
 ## Step 0 - make sure you have Oracle libraries installed
 
